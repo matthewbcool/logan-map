@@ -5,6 +5,9 @@ import BottomFilters from './Components/BottomFilters'
 import SideBar from './Components/SideBar'
 
 class App extends Component {
+  state = {
+    showSideBar: true
+  }
   render() {
     return (
       <div className="wrapper">

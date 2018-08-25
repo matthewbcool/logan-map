@@ -1,5 +1,5 @@
 Project Status:
-Hours Log: 5
+Hours Log: 8
 
 
 

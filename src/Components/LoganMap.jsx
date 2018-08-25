@@ -1,7 +1,12 @@
 import React from 'react'
 import '../App.css'
 import GoogleMapReact from 'google-map-react'
-import LoganMapInstance from './LoganMapInstance'
+
+import { FaBullseye } from "react-icons/fa"
+import { FaBeer } from 'react-icons/fa'
+import { IoIosRestaurant } from "react-icons/io"
+import { FiShoppingBag } from "react-icons/fi"
+import { MdDirectionsRun } from "react-icons/md"
 
 
 class LoganMap extends React.Component {
@@ -13,13 +18,39 @@ class LoganMap extends React.Component {
             <div id="map" className="map-box">
              <GoogleMapReact
           bootstrapURLKeys={{ key: "AIzaSyDyJ4DkX9g-x6blTKDjDdf9EI2_mGKRTPM" }}
-          defaultCenter={{lat: 41.923122, lng: -87.709290}}
+          defaultCenter={{lat: 41.929, lng: -87.71}}
           defaultZoom={15}
         >
-          <LoganMapInstance
-            lat={41.923122}
-            lng={-87.709290}
-          />
+            <FaBullseye
+            key= "1"
+            lat= {41.931}
+            lng= {-87.712}
+            className="filter-icons"
+            />
+             <FaBeer
+            key= "2"
+            lat= {41.929}
+            lng= {-87.716}
+            className="filter-icons"
+            />
+             <IoIosRestaurant
+            key= "3"
+            lat= {41.932}
+            lng= {-87.713}
+            className="filter-icons"
+            />
+             <FiShoppingBag
+            key= "4"
+            lat= {41.932}
+            lng= {-87.715}
+            className="filter-icons"
+            />
+             <MdDirectionsRun
+            key= "5"
+            lat= {41.928}
+            lng= {-87.708}
+            className="filter-icons"
+            />
         </GoogleMapReact>
             </div>
         )
