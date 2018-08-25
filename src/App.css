@@ -1,11 +1,18 @@
 :root {
   --map-height: calc(100vh * 9/10);
+  --map-width: calc(100vw * 9/10);
 }
-
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.side-bar-box {
+ display: none;
+}
 .map-box {
   height: 100%;
   width: 100%;
-  border-bottom: solid black 3px;
+  border-bottom: solid black 1px;
 }
 #map {
   
@@ -25,4 +32,22 @@
 
 .filter-icons {
   font-size: 2em;
+}
+
+@media ( min-width: 570px ) {
+  .map-and-search-wrapper {
+    display: flex;
+    flex-direction: row;
+  }
+  .side-bar-box {
+    display: block;
+    height: var(--map-height);
+    width: 15vw;
+    border-bottom: solid black 1px;
+    border-right: solid black 1px;
+    margin-left: 5px;
+  }
+  #map {
+    width: var(--map-width)
+  }
 }

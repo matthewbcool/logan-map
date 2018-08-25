@@ -1,6 +1,6 @@
 Project Status:
-Hours Log: 1
-Basic UI sketch completed.
+Hours Log: 5
+
 
 
 
