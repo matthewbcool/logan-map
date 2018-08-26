@@ -6,14 +6,14 @@ import SideBar from './Components/SideBar'
 
 class App extends Component {
   state = {
-    showSideBar: true
+    
   }
   render() {
     return (
       <div className="wrapper">
         <div className="map-and-search-wrapper">
           <SideBar />
-          <LoganMap />
+          <LoganMap  />
         </div>
         <BottomFilters />
       </div>

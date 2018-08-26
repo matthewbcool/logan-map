@@ -1,7 +1,7 @@
 import React from 'react'
 import '../App.css'
 import GoogleMapReact from 'google-map-react'
-
+import Modal from '@material-ui/core/Modal'
 import { FaBullseye } from "react-icons/fa"
 import { FaBeer } from 'react-icons/fa'
 import { IoIosRestaurant } from "react-icons/io"
@@ -10,9 +10,20 @@ import { MdDirectionsRun } from "react-icons/md"
 
 
 class LoganMap extends React.Component {
+    state = {
+            open: true
+        }
     componentDidMount() {
-        console.log()
+   
       }
+      
+      makeModalGo(){
+        console.log(this.state)
+      }
+   makeModalGoAway() {
+        this.state.setState({open: false})
+    }
+    
       render() {
         return (
             <div id="map" className="map-box">
@@ -26,7 +37,13 @@ class LoganMap extends React.Component {
             lat= {41.931}
             lng= {-87.712}
             className="filter-icons"
+            onClick={this.makeModalGo}
             />
+          <Modal 
+          aria-labelledby="simple-modal-title"
+          aria-describedby="simple-modal-description"
+        
+        />
              <FaBeer
             key= "2"
             lat= {41.929}
