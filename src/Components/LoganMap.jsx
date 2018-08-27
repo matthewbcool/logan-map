@@ -10,15 +10,19 @@ import { MdDirectionsRun } from "react-icons/md"
 
 
 class LoganMap extends React.Component {
-    state = {
-            open: true
-        }
+    constructor(props) {
+        super(props);
+        this.state = {
+            open: false,
+        } 
+    }
+
     componentDidMount() {
-   
+ 
       }
       
       makeModalGo(){
-        console.log(this.state)
+        console.log(this.props);
       }
    makeModalGoAway() {
         this.state.setState({open: false})
@@ -36,13 +40,15 @@ class LoganMap extends React.Component {
             key= "1"
             lat= {41.931}
             lng= {-87.712}
+            isModalOpen = {this.props}
             className="filter-icons"
             onClick={this.makeModalGo}
             />
           <Modal 
           aria-labelledby="simple-modal-title"
           aria-describedby="simple-modal-description"
-        
+          open={this.state.open}
+          onClose={this.makeModalGoAway}
         />
              <FaBeer
             key= "2"
