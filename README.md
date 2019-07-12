@@ -1,5 +1,5 @@
 Project Status:
-Hours Log: 8
+project on hold for now.
 
 
 
